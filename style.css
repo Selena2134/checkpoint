@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: rgb(110, 110, 160);
+    background-position: center;
+    color: white;
+
+
+}
+.weather-container{
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+}
+
+#search {
+    cursor: pointer;
+}
