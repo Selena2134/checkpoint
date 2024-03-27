@@ -61,23 +61,6 @@ search.onclick = async () => {
     }
 };
 
-    // const setImage = (weather) => {
-    //     let weathers = {
-    //         "Rain": rain,
-    //         "Clear": clear,
-    //         "Clouds": cloud,
-    //         "Snow": snow
-    //     };
-
-    //     for(let key of Object.keys(weathers)) {
-    //        if(key == weather) {
-    //         weathers[key].classList.remove("hidden");
-    //        }
-    //        else {
-    //         weathers[key].classList.add("hidden");
-    //        }
-    //     }
-// }
 
 
 setImage("test");
