@@ -1,59 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Application meteo</title>
+    <title>Weather Application</title>
 </head>
-
-<body class="flex justify-center items-center min-h-screen">
-    <div class="  w-[400px] h-[555px] rounded-xl weather-container">
-        <div class="bg-transparent h-[45px] m-[20px] rounded-lg pt-[5px] pl-[5px] border-solide border-[1px] weather-container" id="search-container">
-            <i class='bx bx-search absolute right-3 text-2xl' id="search"></i>
-            <i class='bx bxs-map relative mt-[3px] text-xl'></i>
-            <input type="text" placeholder="Votre Position" id="location"
-                class="focus:outline-none bg-transparent text-2xl  placeholder:text-white capitalize">
-            <p id="error" class="text-red-500 mt-2"></p>
-
+<body>
+    <div class="weather-container">
+        <div class="location-input">
+            <input type="text" id="location" placeholder="Enter Location">
+            <button onclick="getWeather()">Get Weather</button>
         </div>
-        <div>
-            <img id="clear" src="clear.png" class="w-[60%] relative left-24">
-            <img id="cloud" src="cloud.png" class="w-[60%] relative left-24 hidden">
-            <img id="rain" src="rain.png" class="w-[60%] relative left-24 hidden">
-            <img id="snow" src="snow.png" class="w-[60%] relative left-24 hidden">
+        <div class="weather-info">
+            <h2 id="location-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
         </div>
-        <div class="flex justify-center items-center flex-col mt-[20px]">
-            <p class="text-6xl font-bold"><span id="temperature"></span><span class="absolute text-[24px] ">°c</span></p>
-            <p class="capitalize text-xl font-medium" id="name"></p>
-        </div>
-        <div class="flex justify-evenly mt-[50px]">
-            <div class="flex">
-                <i class='bx bx-water  text-6xl'></i>
-                <div class="relative text-xl">
-                    <p class="font-bold"> <span id="humidity"></span> %</p>
-                    <p class="font-bold">humidité</p>
-                </div>
-            </div>
-            <div class="flex">
-                <i class='bx bx-wind text-6xl'></i>
-                <div>
-                    <p class="font-bold"><span id="wind"></span> KM/h</p>
-                    <p class="font-bold">Vitesse du vent</p>
-                </div>
-
-
-            </div>
-
-        </div>
-
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="main.js" type="module"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
